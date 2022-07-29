@@ -5,7 +5,7 @@ const initialState = {
 };
 
 const initialUserState = {
-  userName: 0,
+  userName: "emir",
 };
 
 function userReducer(state = initialUserState, action) {

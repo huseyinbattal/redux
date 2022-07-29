@@ -4,8 +4,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { store } from "../index";
 
 function Header(props) {
-  const count = useSelector((state) => state);
+  const countState = useSelector((state) => state.count);
   const dispatch = useDispatch();
+
+  console.log(countState.count)
 
   useEffect(() => {
     const state = store.getState();
@@ -40,7 +42,9 @@ function Header(props) {
       >
         Decrease Number
       </button>
-      Ben bir Header {count}
+      <br/>
+      Ben bir Header {countState.count}
+      <br/>
       <Content onClick={props.onClick} userName={props.userName} />
     </nav>
   );

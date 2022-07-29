@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 function ContentBody(props) {
-  // const count = useSelector((state) => state.count);
+  const userState = useSelector((state) => state.user);
   const dispatch = useDispatch();
 
   return (
@@ -17,6 +17,8 @@ function ContentBody(props) {
       >
         Change Number
       </button>
+      <br/>
+     <h1> {userState.userName}</h1>
       <h1 onClick={props.onClick}>
         {" "}
         Bana gelen değer {props.userName}
