@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Content from "./Content";
 import { useDispatch, useSelector } from "react-redux";
 import { store } from "../index";
+import { DECREMENT } from "../store/actions/countActions";
 
 function Header(props) {
   const countState = useSelector((state) => state.count);
@@ -25,7 +26,7 @@ function Header(props) {
       <button
         onClick={() => {
           store.dispatch({
-            type: "DECREMENT",
+            type: DECREMENT,
             payload: 50,
           });
         }}
@@ -35,7 +36,7 @@ function Header(props) {
       <button
         onClick={() => {
           dispatch({
-            type: "DECREMENT",
+            type: DECREMENT,
             payload: 5,
           });
         }}

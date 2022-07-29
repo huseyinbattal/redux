@@ -1,5 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { INCREMENT } from "../store/actions/countActions";
 
 function ContentBody(props) {
   const userState = useSelector((state) => state.user);
@@ -10,7 +11,7 @@ function ContentBody(props) {
       <button
         onClick={() => {
           dispatch({
-            type: "INCREMENT",
+            type: INCREMENT,
             payload: 5,
           });
         }}
