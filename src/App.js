@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {count}
+        Sayı: {count}
         <Header
           onClick={() => {
             alert("h1 tıklandı!");

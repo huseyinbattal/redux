@@ -1,11 +1,25 @@
-import React from 'react'
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 function ContentBody(props) {
+  const count = useSelector((state) => state.count);
+  const dispatch=useDispatch()
+
   return (
-      <div>
-          <h1 onClick={props.onClick}> Bana gelen değer {props.userName}</h1>
-      </div>
-  )
+    <div>
+      <button onClick={() => {
+     
+        dispatch({
+          type:"INCREMENT",
+          payload:5,
+        })
+      }}>Change Number</button>
+      <h1 onClick={props.onClick}>
+        {" "}
+        Bana gelen değer {props.userName} {count}
+      </h1>
+    </div>
+  );
 }
 
-export default ContentBody
+export default ContentBody;
