@@ -11,24 +11,25 @@ function Header(props) {
     const state = store.getState();
     console.log("state", state);
   }, [store.getState()]);
-    
-    useEffect(() => {
-        store.subscribe(() => {
-          console.log("değişti",store.getState())
-      })
-   
-    }, [])
-    
+
+  useEffect(() => {
+    store.subscribe(() => {
+      console.log("değişti", store.getState());
+    });
+  }, []);
 
   return (
-      <nav>
-          <button onClick={() => {
-              store.dispatch({
-                  type: "DECREMENT",
-                  payload:50,
-                  
-              })
-          }}>Test</button>
+    <nav>
+      <button
+        onClick={() => {
+          store.dispatch({
+            type: "DECREMENT",
+            payload: 50,
+          });
+        }}
+      >
+        Test
+      </button>
       <button
         onClick={() => {
           dispatch({
