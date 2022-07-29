@@ -3,11 +3,11 @@ import { useSelector } from "react-redux";
 import ContentBody from "./ContentBody";
 
 function Content(props) {
-  const count=useSelector((state)=>state.count)
+ // const count=useSelector((state)=>state.count)
 
   return (
       <div>
-          Ben Header içerisinde Content {count}
+          Ben Header içerisinde Content
           <ContentBody onClick={props.onClick} userName={ props.userName} />
       </div>
   );

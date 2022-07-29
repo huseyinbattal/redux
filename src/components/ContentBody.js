@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 function ContentBody(props) {
-  const count = useSelector((state) => state.count);
+  // const count = useSelector((state) => state.count);
   const dispatch = useDispatch();
 
   return (
@@ -19,7 +19,7 @@ function ContentBody(props) {
       </button>
       <h1 onClick={props.onClick}>
         {" "}
-        Bana gelen değer {props.userName} {count}
+        Bana gelen değer {props.userName}
       </h1>
     </div>
   );

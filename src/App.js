@@ -5,11 +5,11 @@ import Header from "./components/Header";
 
 function App() {
   const [userName, setUserName] = useState("emir")
-  const count=useSelector((state)=>state.count)
+ // const count=useSelector((state)=>state.count)
   return (
     <div className="App">
       <header className="App-header">
-        Sayı: {count}
+        Sayı:
         <Header
           onClick={() => {
             alert("h1 tıklandı!");

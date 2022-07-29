@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { store } from "../index";
 
 function Header(props) {
-  const count = useSelector((state) => state.count);
+  const count = useSelector((state) => state);
   const dispatch = useDispatch();
 
   useEffect(() => {
