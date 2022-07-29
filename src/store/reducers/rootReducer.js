@@ -1,5 +1,4 @@
-import {combineReducers} from "redux"
-
+import { combineReducers } from "redux";
 
 const initialState = {
   count: 0,
@@ -9,11 +8,11 @@ const initialUserState = {
   userName: 0,
 };
 
-function userReducer(state=initialUserState,action) {
+function userReducer(state = initialUserState, action) {
   switch (action.type) {
     case "SET_USERNAME":
-      return { userName:action.payload};
-  
+      return { userName: action.payload };
+
     default:
       return state;
   }
@@ -31,4 +30,10 @@ function rootReducer(state = initialState, action) {
   }
 }
 
-export default rootReducer;
+const reducer = combineReducers({
+  count: rootReducer,
+  user: userReducer,
+});
+
+export default reducer;
+// export default rootReducer;
