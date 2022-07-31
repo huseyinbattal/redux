@@ -7,3 +7,10 @@ export const incrementNumber=(number)=>{
         payload:number,
     }
 }
+
+export const decrementNumber=(number)=>{
+    return {
+        type: DECREMENT,
+        payload:number,
+    }
+}

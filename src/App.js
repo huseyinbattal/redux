@@ -12,10 +12,7 @@ function App() {
   return (
     <div className="App">
       <button onClick={() => {
-        dispatch({
-          type: SET_USERNAME,
-          payload:"hüseyin"
-        })
+        dispatch(setUserName("hüseyin"))
       }}>Change Name</button>
       <header className="App-header">
         Sayı:
