@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import userReducer from "./userReducer";
-import countReducer from "./countReducer";
+import userReducer from "./reducers/userReducer";
+import countReducer from "./reducers/countReducer";
 
 const reducer = combineReducers({
   count: countReducer,

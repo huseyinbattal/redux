@@ -1,11 +1,6 @@
 import { DECREMENT, INCREMENT } from "../actions/countActions";
+import { initialState } from "../state/countState";
 
-const initialState = {
-    count: 0,
-  };
-  
-  
-  
   function countReducer(state = initialState, action) {
     switch (action.type) {
       case INCREMENT:
