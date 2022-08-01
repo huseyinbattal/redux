@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
+import Appa from "./Appa";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import { applyMiddleware, createStore } from "redux";
@@ -14,7 +14,7 @@ export const store = createStore(rootReducer,applyMiddleware(thunk,logger));
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
-    <App />
+    <Appa/>
   </Provider>
 );
 
