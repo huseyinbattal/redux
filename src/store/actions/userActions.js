@@ -6,3 +6,10 @@ export const setUserName = (userName) => {
     payload: userName,
   };
 };
+
+
+export const fetchData = () => {
+  return (dispatch) => {
+    fetch('')
+  }
+}
