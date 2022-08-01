@@ -1,8 +1,6 @@
 import { SET_USERNAME } from "../actions/userActions";
+import { initialUserState } from "../state/userState";
 
-const initialUserState = {
-    userName: "emir",
-  };
   
   function userReducer(state = initialUserState, action) {
     switch (action.type) {
