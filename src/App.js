@@ -11,6 +11,9 @@ function App() {
   // const count=useSelector((state)=>state.count)
   return (
     <div className="App">
+
+<button>Click and use redux with async</button>
+
       <button
         onClick={() => {
           dispatch(setUserName("hüseyin"));
