@@ -7,9 +7,8 @@ export const setUserName = (userName) => {
   };
 };
 
-
 export const fetchData = () => {
   return (dispatch) => {
-    fetch('')
-  }
-}
+    fetch("");
+  };
+};
