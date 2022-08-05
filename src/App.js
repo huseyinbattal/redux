@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./App.css";
 import Header from "./components/Header";
-import { SET_USERNAME } from "./store/actions/userActions";
+import { fetchData, SET_USERNAME } from "./store/actions/userActions";
 import { setUserName } from "./store/actions/userActions";
 
 function App() {
@@ -11,8 +11,9 @@ function App() {
   // const count=useSelector((state)=>state.count)
   return (
     <div className="App">
-
-<button>Click and use redux with async</button>
+      <button onClick={() => {
+        dispatch(fetchData())
+      }}>Click and use redux with async</button>
 
       <button
         onClick={() => {
