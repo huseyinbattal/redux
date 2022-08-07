@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import Content from "./Content";
 import { useDispatch, useSelector } from "react-redux";
-import { store } from "../index";
 import { DECREMENT, decrementNumber } from "../store/actions/countActions";
+import { store } from "../store";
 
 function Header(props) {
   const countState = useSelector((state) => state.count);

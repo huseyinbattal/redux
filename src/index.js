@@ -4,17 +4,17 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
-import { applyMiddleware, createStore } from "redux";
-import rootReducer from "./store";
-import thunk from "redux-thunk";
-import logger from "redux-logger";
+import { persistor, store } from "./store";
+import { PersistGate } from "redux-persist/integration/react";
 
-export const store = createStore(rootReducer,applyMiddleware(thunk,logger));
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
+    <PersistGate persistor={persistor} loading={<div>...</div>}>
     <App/>
+    </PersistGate>
   </Provider>
 );
 
